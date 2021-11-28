@@ -12,7 +12,7 @@
 
 ### Hardware Suportado
 
-![Exemplo original do hardware](("https://s3.us-west-2.amazonaws.com/secure.notion-static.com/95f794fa-16f7-4ff4-b5ba-4736435b7c6b/Untitled.png"))
+![Exemplo original do hardware](("https://s3.us-west-2.amazonaws.com/secure.notion-static.com/95f794fa-16f7-4ff4-b5ba-4736435b7c6b/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20211126%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20211126T125145Z&X-Amz-Expires=86400&X-Amz-Signature=c329c6a6bb1a1d2391afebfc473c39bd93d5956a3b918787845a707077f1030d&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22Untitled.png%22&x-id=GetObject"))
 
 
 1. Arduino MKR1000
