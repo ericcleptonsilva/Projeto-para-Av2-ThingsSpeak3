@@ -85,7 +85,7 @@ https://api.thingspeak.com/update?api_key=YOUR-WRITING-API-KEY&field4=1
 
 5. Depois de carregar seu programa com sucesso, você pode monitorar a saída usando o monitor serial. Se um objeto estiver presente a uma distância mais próxima do limite definido, seu dispositivo posta a distância para o seu canal. Experimente fazer experiências com o número de medições para calcular a média e veja como as flutuações medidas mudam. Depois de definir os parâmetros, você pode alterar o valor do sinalizador de leitura de `1`para `0`. Uma vez que seu dispositivo lê este sinalizador como 0, ele para de verificar os parâmetros do ThingSpeak, economizando energia e largura de banda.
 
-```C+
+```C++
 #include <ThingSpeak.h>// always include thingspeak header file after other header files and custom macros
 #include <ESP8266WiFi.h>
 
