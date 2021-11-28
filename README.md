@@ -3,8 +3,8 @@
 >Este exemplo mostra como prototipar com ThingSpeak usando uma placa esp32 conectada por Wi-Fi. Você lê e grava dados de canal com a Biblioteca de comunicação ThingSpeak. A leitura do limite é ajustável, e lido no ThingSpeak para criar um detector de proximidade. O hardware consiste em um NodeMCU Amica CP2102 com ESP8266 Esp12 com um sensor ultrassônico hc-sr04 e um LED indicador para mostrar quando um objeto está presente. 
 >A prototipagem de um projeto de sensor pode exigir reflashing de múltiplos códigos para ajustar os parâmetros de calibração, como os de um sensor de temperatura. Um ajuste de hardware adiciona complexidade, reduz a confiabilidade e pode ser difícil de alcançar quando seu projeto é implantado. Em vez disso, você pode ler os parâmetros de calibração do ThingSpeak e alterar os parâmetros em tempo real. Você pode melhorar a qualidade de suas medições ao ajustar um parâmetro de ajuste armazenado no ThingSpeak.
 
-![Exemplo original do hardware](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/95f794fa-16f7-4ff4-b5ba-4736435b7c6b/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20211128%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20211128T194350Z&X-Amz-Expires=86400&X-Amz-Signature=c79f6ac450bc1a32cddd41d10b04af87ef7f95b86197494d568deaf06b08872c&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22Untitled.png%22&x-id=GetObject)
-Exemplo original do hardware
+![Exemplo original do hardware](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/95f794fa-16f7-4ff4-b5ba-4736435b7c6b/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20211128%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20211128T194350Z&X-Amz-Expires=86400&X-Amz-Signature=c79f6ac450bc1a32cddd41d10b04af87ef7f95b86197494d568deaf06b08872c&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22Untitled.png%22&x-id=GetObject)[*Exemplo original do hardware*](https://www.mathworks.com/help/thingspeak/prototyping-with-sonar-proximity-sensor.html)
+
 
 ### Hardware Suportado
 
@@ -20,8 +20,8 @@ Exemplo original do hardware
 *  O sinalizador de leitura é definido para forçar a leitura dos parâmetros de calibração
 *  O sinalizador de leitura é definido para forçar a leitura dos parâmetros de calibração
 
-![Exemplo original em tempo real](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/1aa1f073-20d8-4b12-b491-c08f95b39869/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20211128%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20211128T194109Z&X-Amz-Expires=86400&X-Amz-Signature=223099cfe70c619cd40de9994da9a6ea029fad13045c3f9163eded154396874c&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22Untitled.png%22&x-id=GetObject)
-Exemplo original em tempo real
+![Exemplo original em tempo real](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/1aa1f073-20d8-4b12-b491-c08f95b39869/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20211128%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20211128T194109Z&X-Amz-Expires=86400&X-Amz-Signature=223099cfe70c619cd40de9994da9a6ea029fad13045c3f9163eded154396874c&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22Untitled.png%22&x-id=GetObject)*Exemplo original em tempo real*
+
 
 ### Hardware Utilizado
 * NodeMCU Amica CP2102 com ESP8266 Esp12E 
@@ -34,8 +34,8 @@ Exemplo original em tempo real
 1. >Crie um canal ThingSpeak, conforme mostrado em Coletar dados em um novo canal . Armazene os dados no primeiro campo e armazene as configurações do dispositivo em campos sucessivos. As configurações do dispositivo incluem o limite de distância, número de medições para calcular a média e um sinalizador para controlar se o dispositivo atualiza as configurações em cada loop.
 2. >Ative os campos 1, 2, 3 e 4 na visualização Configurações do canal . Para distinguir entre os campos, forneça um nome descritivo para cada campo. Esta imagem mostra um único canal configurado para coletar dados no primeiro campo e armazenar os parâmetros de calibração nos campos 2, 3 e 4.
 
-![No começo de tudo](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/1e298c3a-6845-4e5b-bfc1-b53ace02a06b/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20211128%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20211128T194644Z&X-Amz-Expires=86400&X-Amz-Signature=d54728961befee4ee5a46e5787320861cc72ea87a0579e6455eb94e41e5fc137&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22Untitled.png%22&x-id=GetObject)
-No começo de tudo
+![No começo de tudo](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/1e298c3a-6845-4e5b-bfc1-b53ace02a06b/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20211128%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20211128T194644Z&X-Amz-Expires=86400&X-Amz-Signature=d54728961befee4ee5a46e5787320861cc72ea87a0579e6455eb94e41e5fc137&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22Untitled.png%22&x-id=GetObject)*No começo de tudo*
+
 
 3. >Observe as chaves API de leitura e gravação apropriadas na guia Chaves API na visualização Configurações do canal (circulada na imagem).
 4. >Preencha seus campos de calibração usando uma janela do navegador. Você pode copiar o texto da guia Chaves de API ou modificar este texto com sua chave de API de gravação. Insira cada URL diretamente na barra de endereço de seu navegador, alterando SUA CHAVE DE API DE ESCRITA (YOUR-WRITING-API-KEY) para a chave de API de gravação para seu canal.
@@ -71,7 +71,7 @@ https://api.thingspeak.com/update?api_key=YOUR-WRITING-API-KEY&field4=1
 
 5. Conecte um **resistor 200Ω** ao pino **D2** do **NodeMCU** e conecte o **resistor** a um **LED** indicador. Conecte o **ânodo** do **LED** ao **GND**.
 
-![](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/123909bc-879b-426c-933f-8af26551706e/Sensor_de_Aproximiadade.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20211128%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20211128T195502Z&X-Amz-Expires=86400&X-Amz-Signature=8d21c55a537b0755f048c6ffdc0356950740caca307672a9321886e862bb5f1d&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22Sensor%2520de%2520Aproximiadade.jpg%22&x-id=GetObject)
+![Esquemático da conexões](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/123909bc-879b-426c-933f-8af26551706e/Sensor_de_Aproximiadade.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20211128%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20211128T195502Z&X-Amz-Expires=86400&X-Amz-Signature=8d21c55a537b0755f048c6ffdc0356950740caca307672a9321886e862bb5f1d&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22Sensor%2520de%2520Aproximiadade.jpg%22&x-id=GetObject)*Esquemático da conexões*
 
 ### Programe Seu Arduino
 
@@ -260,14 +260,6 @@ void loop() {
 }
 ```
 ### Resultado Final
-> Image do site
 
-![](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/934ff9c0-d87d-46fa-818e-7a93dd8ed98b/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20211128%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20211128T195802Z&X-Amz-Expires=86400&X-Amz-Signature=4c460b1488d8551732145ab8d4668d128b34e6e459116e08d92a2f6166ddae16&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22Untitled.png%22&x-id=GetObject)
+![Image do site](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/934ff9c0-d87d-46fa-818e-7a93dd8ed98b/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20211128%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20211128T195802Z&X-Amz-Expires=86400&X-Amz-Signature=4c460b1488d8551732145ab8d4668d128b34e6e459116e08d92a2f6166ddae16&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22Untitled.png%22&x-id=GetObject)*Image do site*
 
-![](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/a8501342-a323-46e3-8956-af050a9cd021/VID_20211105_2350512.mp4?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20211128%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20211128T195831Z&X-Amz-Expires=86400&X-Amz-Signature=97d2f1a4e4aa70c751ad24a324aeb06aececb602bebfc633d306f35e1bd10fae&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22VID_20211105_235051~2.mp4%22&x-id=GetObject)
-
-<!-- blank line -->
-<figure class="video_container">
-  <iframe src="https://s3.us-west-2.amazonaws.com/secure.notion-static.com/a8501342-a323-46e3-8956-af050a9cd021/VID_20211105_2350512.mp4?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20211128%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20211128T195831Z&X-Amz-Expires=86400&X-Amz-Signature=97d2f1a4e4aa70c751ad24a324aeb06aececb602bebfc633d306f35e1bd10fae&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22VID_20211105_235051~2.mp4%22&x-id=GetObject" frameborder="0" allowfullscreen="true"> </iframe>
-</figure>
-<!-- blank line -->
